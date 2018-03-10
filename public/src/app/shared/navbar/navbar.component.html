@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
+    <div class="container">
+        <div class="navbar-translate">
+		 <h2 class="navbar-brand">Machine Learning Training Portal</h2>
+            
+            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                            <a [routerLink]="['/user-profile']" class="btn btn-outline-neutral btn-round">Profile</a>
+                </li>
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a [routerLink]="['/home']" class="btn btn-outline-neutral btn-round">Projects</a>
+                </li>
+				<li class="nav-item" *ngIf="!isDocumentation()">
+                    <a [routerLink]="['/theme']" class="btn btn-outline-neutral btn-round">Themes & Elements</a>
+                </li>
+				
+				<li class="nav-item" *ngIf="!isDocumentation()">
+                    <a [routerLink]="['/auth']" class="btn btn-outline-neutral btn-round">Sign Off</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
